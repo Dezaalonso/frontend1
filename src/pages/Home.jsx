@@ -16,7 +16,7 @@ const CATEGORY_IMAGES = {
   Alcohol: "/DACOMBEBIDAS alcoholicas.png",
   Galletas: "/DACOMGALLETAS.png",
   Nuevos: "/DACOMNUEVO.png",
-  Colageno: "/DACOMCOLAGENO.PNG"
+  Colageno: "/DACOMCOLAGENO.png"
 };
 
 /** Match API category names to images even if accent/casing differs (e.g. Colágeno vs Colageno). */
