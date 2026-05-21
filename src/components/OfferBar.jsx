@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./OfferBar.css";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://dacomstore.com/api";
 
 const FALLBACK_OFFERS = [
   "🔥 20% OFF en snacks seleccionados 🔥",

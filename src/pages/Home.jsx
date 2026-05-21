@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Home.css'
 
-const API = "http://127.0.0.1:8000";
+const API = "https://dacomstore.com/api";
 
 const CATEGORY_IMAGES = {
   Drinks: "/DACOMBEBIDAS.png",

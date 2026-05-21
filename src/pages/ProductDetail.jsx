@@ -5,7 +5,7 @@ import { useQuote } from "../components/QuoteContext";
 import { CONTACT } from "../config/contact";
 import { buildSingleProductMessage, whatsappChatUrl } from "../utils/whatsappQuote";
 
-const API = "http://127.0.0.1:8000/products";
+const API = "https://dacomstore.com/api/products";
 
 export default function ProductDetail() {
   const { addToQuote } = useQuote();

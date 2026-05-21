@@ -3,7 +3,7 @@ import { useSearchParams, Link } from "react-router-dom";
 import "./App.css";
 import { useQuote } from "../components/QuoteContext";
 
-const API = "http://127.0.0.1:8000";
+const API = "https://dacomstore.com/api";
 
 export default function SearchResults() {
   const [searchParams] = useSearchParams();
