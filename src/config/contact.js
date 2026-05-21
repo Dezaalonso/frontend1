@@ -20,7 +20,6 @@ export async function getContact() {
     if (!res.ok) throw new Error();
     const data = await res.json();
     _contact = {
-      legalName: "Tienda Está de Oferta S.A.C",
       brandingName: "DACOM COMERCIAL E.I.R.L",
       phoneTel: data.phone || FALLBACK.phone,
       whatsappDigits: (data.whatsapp || FALLBACK.whatsapp).replace(/\D/g, ""),
