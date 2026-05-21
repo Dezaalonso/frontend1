@@ -1,0 +1,148 @@
+.contact-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.75rem 1rem 4rem;
+  color: #1f2937;
+}
+
+.contact-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  color: #003896;
+}
+
+.contact-lead {
+  margin: 0 0 2rem;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.contact-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem 1.35rem;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card-primary .contact-heading,
+.contact-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: #111827;
+}
+
+.contact-subheading {
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  margin: 1.25rem 0 0.35rem;
+}
+
+.contact-list {
+  padding-left: 1.15rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  line-height: 1.5;
+}
+
+.contact-list a {
+  color: #003896;
+  font-weight: 600;
+}
+
+.contact-link-strong {
+  white-space: nowrap;
+}
+
+.contact-muted {
+  color: #374151;
+  margin: 0.15rem 0;
+}
+
+.contact-zone-list {
+  margin: 0.35rem 0 0;
+  padding-left: 1.15rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.contact-inline-link {
+  color: #003896;
+  font-weight: 600;
+}
+
+.contact-inline-link:hover {
+  text-decoration: underline;
+}
+
+.contact-form-intro {
+  font-size: 0.925rem;
+  color: #4b5563;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.contact-field input,
+.contact-field textarea {
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.contact-submit {
+  margin-top: 0.35rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #003896, #1e4ea1);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 56, 150, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+}
+
+.contact-mailto-note {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}

@@ -1,0 +1,251 @@
+/* Add to your Products.css file */
+body {
+  background: #f3f4f6; /* light gray */
+}
+/* Better skeleton loading */
+.skeleton-image {
+  background: linear-gradient(
+    90deg,
+    #f3f4f6 0%,
+    #e5e7eb 50%,
+    #f3f4f6 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-line {
+  height: 12px;
+  background: #e5e7eb;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+
+  max-width: 1200px;   /* 👈 controls overall width */
+  margin: 0 auto;      /* 👈 centers horizontally */
+  padding: 20px;
+}
+
+.product-image-container {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff; /* cleaner than gray */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 👈 FIX */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.price-stock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.product-info {
+  padding-top: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.product-info a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-info a:hover .product-name {
+  color: #e31e24;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+/* Pagination disabled state */
+.pag-btn.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.pag-btn.disabled:hover {
+  background: white;
+}
+
+/* Page info text */
+.page-info {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 20px;
+}
+
+/* No products message */
+.no-products {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Image optimization */
+.product-image-container img {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+/* Card action — quote list */
+.buy-button {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #003896, #1e4ea1);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 56, 150, 0.2);
+}
+
+.buy-button:hover {
+  filter: brightness(1.06);
+}
+
+/* Responsive touch targets for mobile */
+@media (max-width: 640px) {
+  .pag-btn {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+  }
+  
+  .buy-button {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+  }
+  
+  .product-price {
+    font-size: 1.1rem;
+  }
+  
+  .product-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* Smooth transitions */
+.product-card, .buy-button, .pag-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Better pagination buttons */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.pag-btn {
+  border: none;
+  background: white;
+  color: #1f2937;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.pag-btn:hover:not(.disabled) {
+  background: #003896;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 56, 150, 0.25);
+}
+
+.pag-btn:active:not(.disabled) {
+  transform: translateY(0);
+}
+
+.pag-btn.disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.page-info {
+  width: 100%;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.92rem;
+  margin-top: 8px;
+  font-weight: 500;
+}

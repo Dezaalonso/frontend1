@@ -1,0 +1,31 @@
+.offer-bar {
+  width: 100%;
+  overflow: hidden;
+  background: #f88282;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.offer-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: offer-scroll 35s linear infinite;
+}
+
+.offer-track span {
+  flex-shrink: 0;
+  margin-right: 60px;
+}
+
+@keyframes offer-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
